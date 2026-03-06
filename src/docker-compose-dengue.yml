@@ -1,0 +1,19 @@
+version: "3.5"
+services:
+  db:
+    container_name: dengue_db
+    image: postgres:16.8-alpine
+    ports:
+      - 7432:5432
+    volumes:
+      - ./dengue_outbreak_article_db_dump.sql:/docker-entrypoint-initdb.d/dengue_outbreak_article_db_dump.sql
+
+    environment:
+      - POSTGRES_DB=article_db
+      - POSTGRES_USER=article
+      - POSTGRES_PASSWORD=article
+    healthcheck:
+      test: [ "CMD", "pg_isready"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
