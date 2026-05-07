@@ -10,9 +10,4 @@ To begin working on a project using the reproducible-collaborative workflow with
 ## Study Structure
 ----------------
 The repository follows the structure outlined below:
-
-* `conf` - contains any configuration or property files that are specific to the code
-* `lib` - contains any custom macros that are relevant to the analysis
-* `src` - contains statistical programming/analysis codes
-* `study_files` - any documentation, study files, SOPs for the analysis should be placed here
-* `utility` - contains any common procedures that are relevant to the analysis
+* `src` - contains statistical programming/analysis codes.
